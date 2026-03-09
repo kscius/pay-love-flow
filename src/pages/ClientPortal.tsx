@@ -65,8 +65,12 @@ const ClientPortal = () => {
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
 
   // Card details
-  const [savedCards, setSavedCards] = useState<SavedCard[]>([]);
-  const [savedWallets, setSavedWallets] = useState<DigitalWallet[]>([]);
+  const [savedCards, setSavedCards] = useState<SavedCard[]>([
+    { id: "default-card", type: "visa", last4: "4242", holder: "María González", expiry: "12/28" },
+  ]);
+  const [savedWallets, setSavedWallets] = useState<DigitalWallet[]>([
+    { id: "default-wallet", provider: "apple", email: "maria@icloud.com" },
+  ]);
   const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
   const [showAddCard, setShowAddCard] = useState(false);
   const [showAddWallet, setShowAddWallet] = useState(false);
